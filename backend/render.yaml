@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: gym-backend
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "./start.sh"
+    # DATABASE_URL is intentionally NOT listed here. It contains a password, so
+    # it must never be committed to git. Set it in the Render dashboard instead:
+    # your service -> Environment -> Add Environment Variable -> DATABASE_URL.

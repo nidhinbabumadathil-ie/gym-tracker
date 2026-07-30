@@ -1,0 +1,50 @@
+# ─────────────────────────────────────────────
+#  gym-tracker  ·  root .gitignore
+# ─────────────────────────────────────────────
+
+# ===== Secrets (NEVER commit) =====
+.env
+*.env
+**/.env
+*.pem
+*secret*
+*credentials*
+# stray DB credential dumps like the one from the old repo
+*postgresql*.txt
+
+# ===== Flutter / Dart (app/) =====
+app/.dart_tool/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/build/
+app/.pub-cache/
+app/.pub/
+app/pubspec.lock
+app/**/GeneratedPluginRegistrant.*
+# IDE + local config
+app/.idea/
+app/android/.gradle/
+app/android/local.properties
+app/android/key.properties
+app/ios/Pods/
+app/ios/.symlinks/
+# the browser-profile junk that got zipped in at the start
+app/**/chrome-device/
+**/chrome-device/
+
+# ===== Python / FastAPI (backend/) =====
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.py[cod]
+backend/.venv/
+backend/venv/
+backend/env/
+backend/.pytest_cache/
+backend/*.egg-info/
+
+# ===== OS / editor cruft =====
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+*.log
