@@ -1,6 +1,6 @@
 # 🏋️ Gym Tracker
 
-A full-stack workout tracking app — log your sets, follow a 6-day training split,
+A full-stack workout tracking app - log your sets, follow a 6-day training split,
 watch your progress, and hit new personal bests. Built with **Flutter** and a
 **FastAPI + PostgreSQL** backend.
 
@@ -14,13 +14,13 @@ watch your progress, and hit new personal bests. Built with **Flutter** and a
 
 ## ✨ Features
 
-- **6-day training split** — a full weekly plan (Legs & Abs, Back & Biceps, Chest & Shoulders, and more) with every exercise organised by muscle group.
+- **6-day training split** - a full weekly plan (Legs & Abs, Back & Biceps, Chest & Shoulders, and more) with every exercise organised by muscle group.
 - **Set logging** with decimal weights, auto set-numbering, and a rest timer that keeps accurate time even when the screen locks.
-- **Animated home dashboard** — current streak, total volume, sets logged, and achievement badges that unlock as you train.
-- **Progress analytics** — volume-over-time chart plus a per-split-day breakdown, built by joining sets to their training sessions.
-- **Personal-best detection** — beat your heaviest weight on a lift and the app celebrates it with confetti.
-- **Animated exercise demos** — a searchable, muscle-filtered library of exercises, each with looping start→end form frames and written instructions (data from the public-domain [Free Exercise DB](https://github.com/yuhonas/free-exercise-db)).
-- **Rest-timer alarm** — sound + vibration when your rest period ends.
+- **Animated home dashboard** - current streak, total volume, sets logged, and achievement badges that unlock as you train.
+- **Progress analytics** - volume-over-time chart plus a per-split-day breakdown, built by joining sets to their training sessions.
+- **Personal-best detection** - beat your heaviest weight on a lift and the app celebrates it with confetti.
+- **Animated exercise demos** - a searchable, muscle-filtered library of exercises, each with looping start→end form frames and written instructions (data from the public-domain [Free Exercise DB](https://github.com/yuhonas/free-exercise-db)).
+- **Rest-timer alarm** - sound + vibration when your rest period ends.
 
 ---
 
@@ -57,7 +57,7 @@ export DATABASE_URL="postgresql://user:password@host/dbname"
 uvicorn app.main:app --reload
 ```
 
-The API runs at `http://localhost:8000` — interactive docs at `http://localhost:8000/docs`.
+The API runs at `http://localhost:8000` - interactive docs at `http://localhost:8000/docs`.
 
 ### App
 
@@ -76,7 +76,7 @@ Set the API base URL in `app/lib/services/api_service.dart` to your backend (loc
 - Diagnosing a production outage from Render logs (an expired free database) and migrating to a persistent Postgres provider.
 - Designing a rest timer around wall-clock time instead of a ticking counter, so it stays correct after the phone sleeps.
 - Handling cold-start latency on free hosting with request retries + a warm-up ping.
-- Evolving the database schema safely (integer → float weights) with live migrations.
+- Evolving the database schema safely (integer -> float weights) with live migrations.
 
 ---
 
