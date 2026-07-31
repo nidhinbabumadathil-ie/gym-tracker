@@ -5,6 +5,7 @@ import '../models/session.dart';
 import '../data/workout_plan.dart';
 import '../data/stats.dart';
 import 'exercise_search_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -64,7 +65,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
           IconButton(
             icon: const Icon(Icons.logout, color: Colors.redAccent),
             tooltip: 'Sign out',
-            onPressed: () => Navigator.pushReplacementNamed(context, '/sign_in'),
+            onPressed: () async {
+              final prefs = await SharedPreferences.getInstance();
+              await prefs.setBool('loggedIn', false);
+              if (context.mounted) {
+                Navigator.pushReplacementNamed(context, '/sign_in');
+              }
+            },
           ),
         ],
       ),
